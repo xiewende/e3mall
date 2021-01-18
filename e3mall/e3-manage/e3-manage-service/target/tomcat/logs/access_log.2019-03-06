@@ -1,0 +1,2 @@
+127.0.0.1 - - [06/Mar/2019:22:06:45 +0800] "GET /search.html?keyword=%E6%89%8B%E6%9C%BA HTTP/1.1" 404 973 http-bio-8085-exec-1 105
+127.0.0.1 - - [06/Mar/2019:22:06:45 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8085-exec-2 3

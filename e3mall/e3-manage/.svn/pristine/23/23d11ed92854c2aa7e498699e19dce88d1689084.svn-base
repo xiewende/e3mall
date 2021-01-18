@@ -1,0 +1,25 @@
+package e3mall.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import e3mall.domain.TbItem;
+import e3mall.service.ItemService;
+
+@Controller
+public class ItenController {
+	
+	@Autowired
+	private ItemService itemservice;
+	
+	@RequestMapping("/item")
+	public 	@ResponseBody
+	TbItem getItemById() {
+		TbItem item = itemservice.getItemById(860275);
+		System.out.println("laileme");
+		return item;
+	}
+
+}

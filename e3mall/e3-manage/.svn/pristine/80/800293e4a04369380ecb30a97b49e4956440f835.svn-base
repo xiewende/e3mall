@@ -1,0 +1,9 @@
+package e3mall.service;
+
+import e3mall.domain.TbItem;
+
+public interface ItemService {
+	
+	public TbItem getItemById(long id); 
+
+}

@@ -1,0 +1,36 @@
+package e3mall.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import e3mall.domain.TbItem;
+import e3mall.domain.TbItemExample;
+import e3mall.domain.TbItemExample.Criteria;
+import e3mall.mapper.TbItemMapper;
+import e3mall.service.ItemService;
+
+//商品管理
+
+@Service
+public class ItemServiceImpl implements ItemService {
+
+	@Autowired
+	private TbItemMapper itemMapper;
+	
+	public TbItem getItemById(long id) {
+	/**
+		TbItemExample example = new TbItemExample();
+		Criteria criteria = example.createCriteria();
+		//设置查询条件
+		criteria.andIdEqualTo(id);
+		//执行查询
+		List<TbItem> list = itemMapper.selectByExample(example);
+		TbItem it = list.get(0);
+		*/
+		return itemMapper.selectByPrimaryKey(id);
+	}
+
+}
